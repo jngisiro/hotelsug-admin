@@ -1,2 +1,2 @@
-# hotelsug-admin
-Administration Portal for the hotels 
+# hotels.ug
+Listings and Bookings for hotels in Uganda

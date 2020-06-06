@@ -1,0 +1,245 @@
+<h1>Hotel Profile</h1>
+
+<form class="profile-form" #form="ngForm" (ngSubmit)="onUpdate()">
+  <label for="name">
+    Hotel Name
+    <input
+      type="text"
+      placeholder="required"
+      ngModel
+      name="hotelName"
+      #hotelName="ngModel"
+      required
+    />
+    <small *ngIf="hotelName.invalid && hotelName.touched"
+      >Hotel name is required</small
+    >
+  </label>
+
+  <label for="description">
+    Hotel Description
+    <textarea
+      ngModel
+      name="description"
+      #description="ngModel"
+      rows="10"
+      required
+      placeholder="required"
+    ></textarea>
+    <small *ngIf="description.invalid && description.touched"
+      >Please enter a description</small
+    >
+  </label>
+
+  <label for="name">
+    Summary
+    <input
+      ngModel
+      name="summary"
+      #summary="ngModel"
+      type="text"
+      placeholder="required"
+      required
+    />
+    <small *ngIf="summary.invalid && summary.touched"
+      >Please enter a short summary about the hotel</small
+    >
+  </label>
+
+  <label for="website">
+    Hotel's Website
+    <input
+      type="url"
+      placeholder="https://website.com"
+      ngModel
+      name="website"
+      #website="ngModel"
+    />
+  </label>
+
+  <label for="email">
+    Account Email
+    <input
+      type="email"
+      placeholder="email@website.com"
+      ngModel
+      name="email"
+      #email="ngModel"
+    />
+  </label>
+
+  <label for="phoneNumber">
+    Phone Number
+    <input
+      type="tel"
+      placeholder="Phone Number"
+      ngModel
+      name="phoneNumber"
+      #phoneNumber="ngModel"
+    />
+  </label>
+
+  <label for="location">
+    Select Location
+    <select ngModel name="location" #location="ngModel" required>
+      <option>Kampala</option>
+      <option>Jinja</option>
+      <option>Entebbe</option>
+      <option>Fort Portal</option>
+    </select>
+  </label>
+
+  <label for="address">
+    Full Address
+    <input type="text" name="address" ngModel #address="ngModel" required />
+  </label>
+
+  <label for="region">
+    Select Region
+    <select ngModel name="region" #region="ngModel" required>
+      <option>Central Uganda</option>
+      <option>Eastern Uganda</option>
+      <option>Western Uganda</option>
+      <option>South West Uganda</option>
+      <option>Northern Uganda</option>
+      <option>North East Uganda</option>
+    </select>
+  </label>
+
+  <label for="cordinates">
+    Coordinates
+    <input
+      type="text"
+      ngModel
+      name="coordinates"
+      placeholder="Latitude,Longitude"
+      #coordinates="ngModel"
+    />
+  </label>
+
+  <label for="facilities">
+    Hotel Facilities
+    <input
+      type="text"
+      ngModel
+      name="facilities"
+      placeholder="Facility 1, Facility 2, Facility3, ..."
+      #facilities="ngModel"
+    />
+  </label>
+
+  <label for="name">
+    Languages
+    <input
+      type="text"
+      ngModel
+      name="languages"
+      placeholder="Language, language, . . . "
+      #languages="ngModel"
+    />
+  </label>
+
+  <label for="rules">
+    Hotel Rules and Guidelines
+    <textarea
+      ngModel
+      name="rules"
+      #rules="ngModel"
+      rows="10"
+      placeholder="Rule One
+Rule Two
+Rule Three
+. . ."
+    ></textarea>
+  </label>
+
+  <label for="ordinary">
+    Ordinary Rooms
+    <input
+      type="number"
+      ngModel
+      name="ordinary"
+      placeholder="Price in Dollars"
+      #ordinary="ngModel"
+    />
+  </label>
+
+  <label for="double">
+    Double Rooms
+    <input
+      type="number"
+      ngModel
+      name="double"
+      placeholder="Price in Dollars"
+      #double="ngModel"
+    />
+  </label>
+
+  <label for="deluxe">
+    Deluxe Rooms
+    <input
+      type="number"
+      ngModel
+      name="deluxe"
+      placeholder="Price in Dollars"
+      #deluxe="ngModel"
+    />
+  </label>
+
+  <label for="payments" class="payments">
+    <span
+      ><input
+        name="payments"
+        ngModel
+        #payments="ngModel"
+        type="checkbox"
+        value="Mobile Money"
+      />Mobile Money</span
+    >
+    <span
+      ><input
+        name="payments"
+        ngModel
+        #payments="ngModel"
+        type="checkbox"
+        value="VISA"
+      />VISA</span
+    >
+    <span
+      ><input
+        name="payments"
+        ngModel
+        #payments="ngModel"
+        type="checkbox"
+        value="Master Card"
+      />Master Card</span
+    >
+    <span
+      ><input
+        name="payments"
+        ngModel
+        #payments="ngModel"
+        type="checkbox"
+        value="Paypal"
+      />PayPal</span
+    >
+  </label>
+
+  <label for="coverImage">
+    Upload Cover Image
+    <input
+      type="file"
+      ngModel
+      name="coverImage"
+      #coverImage="ngModel"
+      accept="image/*"
+    />
+  </label>
+
+  <label for="images">
+    Add any more images to showcase the hotel
+    <input type="file" accept="image/*" (change)="onFilesChange($event)" />
+  </label>
+
+  <button type="submit">Submit Updates</button>
+</form>

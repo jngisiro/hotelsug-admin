@@ -1,0 +1,71 @@
+main {
+  padding: 100px 40px;
+  text-align: center;
+  margin: -2rem -4rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/img/137088557.jpg);
+  background-size: cover;
+
+  h1 {
+    color: #ffd700;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 20px;
+
+    &:after {
+      content: ""; /* This is necessary for the pseudo element to work. */
+      display: block; /* This will put the pseudo element on its own line. */
+      margin: 0 auto; /* This will center the border. */
+      width: 10%; /* Change this to whatever width you want. */
+      padding-top: 10px; /* This creates some space between the element and the border. */
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc; /* This creates the border. Replace black with whatever color you want. */
+    }
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .ctas {
+    margin-top: 40px;
+    a {
+      border: 1px solid grey;
+      text-decoration: none;
+      color: #ffd700;
+      padding: 7px 30px;
+      margin-left: 10px;
+
+      &:hover {
+        border: 1px solid #ffd700;
+      }
+    }
+  }
+}
+
+.about {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.services {
+  text-align: center;
+  margin-top: 4rem;
+  h2 {
+    font-weight: 200;
+    &:after {
+      content: ""; /* This is necessary for the pseudo element to work. */
+      display: block; /* This will put the pseudo element on its own line. */
+      margin: 0 auto; /* This will center the border. */
+      width: 10%; /* Change this to whatever width you want. */
+      padding-top: 10px; /* This creates some space between the element and the border. */
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc; /* This creates the border. Replace black with whatever color you want. */
+    }
+  }
+  div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}

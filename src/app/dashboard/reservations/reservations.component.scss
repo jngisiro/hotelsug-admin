@@ -1,0 +1,30 @@
+.reservations {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  .table {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(6, 1fr);
+    padding: 15px 10px;
+
+    &.header {
+      background-color: #ffd700;
+      color: #000;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    &.body:nth-child(odd) {
+      background: #eee;
+    }
+
+    &.body {
+      font-size: 14px;
+      color: #444;
+
+      &:hover {
+        color: rgb(11, 35, 139);
+        cursor: pointer;
+      }
+    }
+  }
+}
